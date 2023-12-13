@@ -1,0 +1,222 @@
+
+
+
+
+<!-- 头部开始 -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>商城后台</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="stylesheet" type="text/css"
+	href="../resources/bootstrap/css/bootstrap.css">
+<link rel="stylesheet"
+	href="../resources/bootstrap/css/font-awesome.css">
+
+<script src="../resources/bootstrap/js/jquery.min.js"
+	type="text/javascript"></script>
+<script src="../resources/jQuery-Knob/js/jquery.knob.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$(".knob").knob();
+	});
+</script>
+
+<link rel="stylesheet" type="text/css"
+	href="../resources/bootstrap/css/theme.css">
+<link rel="stylesheet" type="text/css"
+	href="../resources/bootstrap/css/premium.css">
+<style type="text/css">
+#line-chart {
+	height: 300px;
+	width: 800px;
+	margin: 0px auto;
+	margin-top: 1em;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+	color: #fff;
+}
+
+#gdimage {
+	height: 50px;
+	width: 50px;
+}
+</style>
+</head>
+<body class=" theme-blue theme-3">
+
+
+	<script type="text/javascript">
+		$(function() {
+			var uls = $('.sidebar-nav > ul > *').clone();
+			uls.addClass('visible-xs');
+			$('#main-menu').append(uls.clone());
+		});
+	</script>
+
+	<div class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="" href="index.html"><span class="navbar-brand">
+					<span class="glyphicon glyphicon-shopping-cart"></span> ESBUY 商城后台
+			</span></a>
+		</div>
+
+		<div class="navbar-collapse collapse" style="height: 1px;">
+			<ul id="main-menu" class="nav navbar-nav navbar-right">
+				<li class="dropdown hidden-xs"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown"> <span
+						class="glyphicon glyphicon-user padding-right-small"
+						style="position: relative; top: 3px;"></span> admin <i
+						class="fa fa-caret-down"></i>
+				</a>
+
+					<ul class="dropdown-menu">
+						<li><a tabindex="-1" href="../adlogin-out">注销</a></li>
+					</ul></li>
+			</ul>
+
+		</div>
+	</div>
+
+<!-- 头部结束 -->
+
+<!-- 左边菜单开始 -->
+
+	
+    <div class="sidebar-nav">
+    <ul>
+    <li><a href="#" data-target=".goodtype-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 类别管理<i class="fa fa-collapse"></i></a></li>
+    <li><ul class="goodtype-menu nav nav-list collapse in">
+            <li><a href="../admin/goodtype/list"><span class="fa fa-caret-right"></span> 类别列表</a></li>
+            <li ><a href="../admin/goodtype/add"><span class="fa fa-caret-right"></span> 类别添加</a></li>
+    </ul></li>	
+	<li><a href="#" data-target=".good-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 商品管理<i class="fa fa-collapse"></i></a></li>
+    <li><ul class="good-menu nav nav-list collapse in">
+            <li><a href="../admin/good/list"><span class="fa fa-caret-right"></span> 商品列表</a></li>
+            <li ><a href="../admin/good/add"><span class="fa fa-caret-right"></span> 商品添加</a></li>
+    </ul></li>
+    
+    <li><a href="#" data-target=".user-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 会员管理<i class="fa fa-collapse"></i></a></li>
+    <li><ul class="user-menu nav nav-list collapse in">
+            <li><a href="../admin/user/list"><span class="fa fa-caret-right"></span> 会员列表</a></li>
+    </ul></li>
+    <li><a href="#" data-target=".order-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 订单管理<i class="fa fa-collapse"></i></a></li>
+    <li><ul class="order-menu nav nav-list collapse in">
+            <li><a href="../admin/order/list"><span class="fa fa-caret-right"></span> 订单列表</a></li>
+    </ul></li>
+    <li><a href="#" data-target=".system-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 系统管理<i class="fa fa-collapse"></i></a></li>
+    <li><ul class="system-menu nav nav-list collapse in">
+            <li><a href="../admin/email/set"><span class="fa fa-caret-right"></span> 邮件设置</a></li>
+    </ul></li>
+</ul>
+    </div>
+<!-- 左边菜单结束 -->
+
+<div class="content">
+	<div class="header">
+
+		<h1 class="page-title">用户修改</h1>
+		<ul class="breadcrumb">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">用户管理</a></li>
+			<li class="active">用户修改</li>
+		</ul>
+
+	</div>
+	<div class="main-content">
+		<div class="row">
+			<div class="col-md-11">
+				<form class="form-horizontal" action="edit" method="post">					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">编号</label>
+						<div class="col-sm-2">
+							<input type="text" class="form-control" name="uid"
+								value="32" readOnly>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">用户名</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="uname"
+								placeholder="" value="a" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">性别</label>
+						<div class="col-sm-4">
+							<label class="radio-inline"> <input type="radio"
+								name="usex" value="男" checked /> 男
+							</label> <label class="radio-inline"> <input type="radio"
+								name="usex" value="女"  /> 女
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">手机</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="uphone"
+								value="a"  required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">QQ</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="uqq"
+								value="a"  required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="uemail"
+								value="a@a.a"  required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">出生年月</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" name="ubirth"
+								value="2022-11-30"  required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-12">
+							<button class="btn btn-primary">
+								<i class="fa fa-save"></i> 保存
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- 底部开始 -->
+		
+	  <footer>
+                <hr>
+                <p class="pull-right"> JSP程序设计课程组</p>
+                <p>版权所有@2019-2020 湖南信息职业技术学院</p>
+            </footer>
+
+	</body>
+</html>
+		<!-- 底部结束 -->
+	</div>
+</div>

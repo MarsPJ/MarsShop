@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.header {
+  background: #fff;
+  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #ffffff;
+}
+.panel .panel-heading {
+  border-bottom: 1px solid #ccc;
+  border-left: none;
+  color: #333;
+  display: block;
+  margin-bottom: 0px;
+  text-shadow: none;
+  text-transform: none;
+  font-size: .85em;
+  line-height: 1.5em;
+  background: #efefef;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efefef), color-stop(1, #fafafa));
+  background: -ms-linear-gradient(bottom, #efefef, #fafafa);
+  background: -moz-linear-gradient(center bottom, #efefef 0%, #fafafa 100%);
+  background: -o-linear-gradient(bottom, #efefef, #fafafa);
+  filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa',EndColorStr='#efefef')";
+  box-shadow: inset 0px 1px 1px white;
+}
+p.panel-heading,
+a.panel-heading,
+.panel-heading a {
+  color: #505050;
+  display: block;
+  outline: none;
+}
+.panel {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 3px;
+}
+.dialog {
+    margin: 0px auto;
+    margin-top: 5em;
+    float: none;
+    max-width: 400px;
+}
+.dialog .panel {
+  -webkit-box-shadow: 1px 1px 0px #ffffff;
+  -moz-box-shadow: 1px 1px 0px #ffffff;
+  box-shadow: 1px 1px 0px #ffffff;
+}
+
+/*--register--*/
+.panel-heading > h3 {
+    margin: 0;
+	color:#F97E76;
+	font-size: 1.1em;
+	font-weight:600;
+}
