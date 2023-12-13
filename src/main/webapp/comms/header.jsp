@@ -23,10 +23,21 @@
         </div>
         <div class="col-md-3">
             <ul class="men-grid">
-                <li class="cart"><a href="account/cart.html"><span>
+                <li class="cart"><a href="javascript:void(0)" onclick="toCart()"><span>
 							</span>我的购物车</a></li>
             </ul>
         </div>
         <div class="clearfix"></div>
+        <script>
+            function toCart() {
+                if ('${login_user}' == '') {
+                    modal.find('p').html('请先登录');
+                    modal.modal('show');
+                    return;
+                }
+                location.href = '${ctx}/account/cart.html';
+
+            }
+        </script>
     </div>
 </div>

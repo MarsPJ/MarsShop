@@ -66,7 +66,7 @@
 								<div class="dolor-grid">
 									<span class="actual">¥ ${g.gdPrice}</span>
 								</div>
-								<a class="now-get get-cart" href="#">加入购物车</a>
+								<a class="now-get get-cart" href="javascript:void(0)" onclick="addCar('${g.gdId}')">加入购物车</a>
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -92,5 +92,25 @@
 	<%@include file="comms/footer.jsp"%>
 	<!---->
 	<%@include file="comms/modal.jsp"%>
+<script>
+	function addCar(gdId) {
+		if('${login_user}' == '') {
+			modal.find('p').html('请先登录！');
+			modal.modal('show');
+			return;
+		}
+		// post方式提交，传递参数gdId，
+		$.post('${ctx}/account/cart/add.html', {gdId}, function (res){
+			// 设置回调函数
+			// res可以接收controller发回的json消息
+			if (res.code == 1) {
+				modal.find('p').html('商品添加成功！');
+			} else {
+				modal.find('p').html('商品已经在购物车中！可前往购物车修改购买数量');
+			}
+ 			modal.modal('show');
+		})
+	}
+</script>
 </body>
 </html>

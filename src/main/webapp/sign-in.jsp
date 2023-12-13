@@ -1,60 +1,20 @@
-
-
-
+<%--设置 JSP 页面生成的响应的内容类型和页面编码--%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <title>登录</title>
-<link href="resources/bootstrap/css/bootstrap.css"
-	rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet"
-	href="resources/bootstrap/css/bootstrapValidator.min.css" />
-
-<link rel="stylesheet"
-	href="resources/bootstrap/css/font-awesome.css">
-<!--theme-style-->
-<link href="resources/styles/style.css" rel="stylesheet"
-	type="text/css" media="all" />
-<!--//theme-style-->
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
-<!--fonts-->
-<link href='resources/bootstrap/css/font-gooleapis.css'
-	rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" type="text/css"
-	href="resources/styles/style.css" />
-<!--//fonts-->
-<script src="resources/bootstrap/js/jquery.min.js"></script>
-<script src="resources/js/jquery.easydropdown.js"></script>
-<!--script-->
-<script src="resources/bootstrap/js/bootstrap.js"
-	type="text/javascript"></script>
-<script
-	src="resources/bootstrap/js/bootstrapValidator.min.js"
-	type="text/javascript"></script>
+	<%@include file="comms/source.jsp"%>
 </head>
 <body>
 	<div class="header">
-		<div class="top-header">
-			<div class="container">
-				<div class="top-header-left">
-					<img style="height: 20px"
-						src="resources/images/logowhite.png" />
-				</div>
-				<div class="top-header-right">
-					<a href="sign-up.html" class="label"><i class="fa fa-key"> </i> 注册</a>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
+		<%@include file="comms/top.jsp"%>
 	</div>
 	<!-- /head部件 -->
 
 	<div class="register">
-		<form class="form-horizontal" method="post" action="index.jsp">
+		<form class="form-horizontal" method="post" action="${ctx}/sign-in.html">
 			<div class="  register-top-grid">
 				<div class="form-group">
 					<div class="col-sm-2"></div>
@@ -68,13 +28,13 @@
 					<div class="row">
 						<label class="col-sm-2"></label>
 						<div class="col-sm-5">
-							<div id="alert-info" class="alert alert-danger hide" role="alert"><i class="fa fa-info-circle"></i> </div>
+							<div id="alert-info" class="alert alert-danger hide" role="alert"><i class="fa fa-info-circle">${msg}</i> </div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label"><span>用户名*</span></label>
 						<div class="col-sm-5">
-							<input type="text" name="uname" />
+							<input type="text" name="uname" value="${param.uname}"/>
 						</div>
 					</div>
 					<div class="form-group">
@@ -98,7 +58,7 @@
 
 	<script>
 		$(function() {
- 			if ('' != '') {
+ 			if ('${msg}' != '') {
 				$('#alert-info').addClass("show");
 			} 
 			

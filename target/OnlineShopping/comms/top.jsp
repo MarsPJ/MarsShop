@@ -15,27 +15,35 @@
             </div>
         </c:if>
         <div class="top-header-right">
-            <div class="down-top">
-                <select class="dropdown">
-                    <option value="1" class="label" value="">注册</option>
-                </select>
-            </div>
-            <div
-                    class="down-top
+            <c:choose>
+                <c:when test="${login_user == null}">
+                    <div class="down-top">
+                        <select class="dropdown">
+                            <option value="1" class="label" value="">注册</option>
+                        </select>
+                    </div>
+                    <div
+                            class="down-top
 
 					">
-                <select class="dropdown">
-                    <option value="2" class="label" value="">登录</option>
-                </select>
-            </div>
+                        <select class="dropdown">
+                            <option value="2" class="label" value="">登录</option>
+                        </select>
+                    </div>
+                </c:when>
+                <c:otherwise>
+                    <div class="down-top">
+                        <select class="dropdown">
+                            <option value="${login_user.uid}" class="label">${login_user.uname}</option>
+                            <option>我的订单</option>
+                            <option>注销</option>
+                        </select>
+                    </div>
+                </c:otherwise>
 
-            <div class="down-top">
-                <select class="dropdown">
-                    <option value="3" class="label">guobingyan</option>
-                    <option>我的订单</option>
-                    <option>注销</option>
-                </select>
-            </div>
+
+            </c:choose>
+
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -53,7 +61,11 @@
         $("ul li").click(function() {
             var selected = $(this).text();
             if (selected == '我的订单') location.href = 'account/myorder.html';
-            if (selected == '注销') location.href = 'sign-out';
+            if (selected == '注销') {
+                if (confirm('确定要注销吗？'))
+                    location.href = 'sign-out.html';
+
+            }
 
         });
     });

@@ -50,7 +50,7 @@
 					<span>库存：${goods.gdQuantity}</span><span>发货地：${goods.gdCity}</span>
 				</p>
 
-				<a href="account/cart.html" class="now-get">加入购物车</a>
+				<a href="javascript:void(0)" onclick="addCar('${goods.gdId}')" class="now-get">加入购物车</a>
 
 			</div>
 			<div class="clearfix"></div>
@@ -74,6 +74,25 @@
 
 
 <%@include file="comms/modal.jsp"%>
-
+	<script>
+		function addCar(gdId) {
+			if('${login_user}' == '') {
+				modal.find('p').html('请先登录！');
+				modal.modal('show');
+				return;
+			}
+			// post方式提交，传递参数gdId，
+			$.post('${ctx}/account/cart/add.html', {gdId}, function (res){
+				// 设置回调函数
+				// res可以接收controller发回的json消息
+				if (res.code == 1) {
+					modal.find('p').html('商品添加成功！');
+				} else {
+					modal.find('p').html('商品已经在购物车中！可前往购物车修改购买数量');
+				}
+				modal.modal('show');
+			})
+		}
+	</script>
 </body>
 </html>

@@ -32,6 +32,13 @@ public interface UserDao {
     User selectByUid(Integer uid);
 
     /**
+     * 根据会员名查询会员信息
+     * @param uname
+     * @return
+     */
+    User selectByUname(String uname);
+
+    /**
      * 根据会员信息查询会员是否存在
      * @param user
      * @return

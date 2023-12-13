@@ -25,6 +25,13 @@ public interface UserService {
     User selectByUid(Integer uid);
 
     /**
+     * 根据会员名和密码查询会员信息
+     * @param uname
+     * @return
+     */
+    User selectByUnameAndUpwd(String uname, String upwd);
+
+    /**
      * 根据会员信息查询会员是否存在
      * @param user
      * @return

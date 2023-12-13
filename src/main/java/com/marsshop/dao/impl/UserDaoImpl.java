@@ -123,6 +123,40 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     }
 
     @Override
+    public User selectByUname(String uname) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User user = null;
+        try {
+            conn = getConn();
+            String sql = "select uID, uname, uPwd, uSex, uBirth, uPhone, uEmail, uQQ, uImage, uCredit, uRegTime from user where uname=?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, uname);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                user = new User();
+                user.setUid(rs.getInt("uid"));
+                user.setUname(rs.getString("uname"));
+                user.setUpwd(rs.getString("upwd"));
+                user.setUsex(rs.getString("usex"));
+                user.setUbirth(rs.getDate("ubirth"));
+                user.setUphone(rs.getString("uphone"));
+                user.setUemail(rs.getString("uemail"));
+                user.setUqq(rs.getString("uqq"));
+                user.setUimage(rs.getString("uimage"));
+                user.setUcredit(rs.getInt("ucredit"));
+                user.setUregTime(rs.getTimestamp("uregTime"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(conn, ps, rs);
+        }
+        return user;
+    }
+
+    @Override
     public boolean existByUser(User user) {
         Connection conn = null;
         PreparedStatement ps = null;

@@ -14,6 +14,8 @@
         type="text/javascript"></script>
 <script type="text/javascript">
     $(function() {
+        // 全局变量
+        modal = $('#alertModal');
         // $('#alertModal').modal('show');
     });
 </script>

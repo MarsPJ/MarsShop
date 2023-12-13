@@ -31,10 +31,37 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User selectByUnameAndUpwd(String uname, String upwd) {
+        User user = userDao.selectByUname(uname);
+
+        if (user != null) {
+            // md5给密码加密
+            // TODO:使用更安全的加密方式
+            try {
+                MessageDigest messageDigest = MessageDigest.getInstance("md5");
+                byte[] bytes = messageDigest.digest(upwd.getBytes("utf-8"));
+                // 将密文转成32位16进制
+                String pwd = new BigInteger(1, bytes).toString(16);
+
+                if (pwd.equals(user.getUpwd())) {
+                    return user;
+                }
+
+            } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return null;
+    }
+
+    @Override
     public boolean existsByUser(User user) {
         boolean result = userDao.existByUser(user);
         return result;
     }
+
 
     @Override
     public void save(User user) {

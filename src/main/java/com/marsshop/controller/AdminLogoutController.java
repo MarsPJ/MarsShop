@@ -11,8 +11,8 @@ public class AdminLogoutController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.removeAttribute("admin_login");
-        // 设置会话失效
-        session.invalidate();
+        // 设置会话失效，注意这会导致用户登录的session也失效，因为是同一个浏览器
+        // session.invalidate();
         // 重定向登录
         response.sendRedirect(request.getContextPath() + "/admin/adlogin.jsp");
     }
