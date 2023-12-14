@@ -42,4 +42,10 @@ public interface CartDao {
      */
     void delete(Integer scId);
 
+    /**
+     * 根据用户id删除购物车
+     * @param uid
+     */
+    void deleteByUid(Integer uid);
+
 }

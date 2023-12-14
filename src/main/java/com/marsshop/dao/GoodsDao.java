@@ -74,4 +74,10 @@ public interface GoodsDao {
      * @param goods
      */
     void update(Goods goods);
+
+    /**
+     * 批量修改商品的库存和销量
+     * @param goodsList
+     */
+    void updateQuantityBatch(List<Goods> goodsList);
 }

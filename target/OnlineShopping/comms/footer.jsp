@@ -58,6 +58,6 @@
         </div>
     </div>
     <div class="copy_right">
-        <p>版权所有@2021-2023 pzj <a href="admin/adlogin.jsp">后台管理</a></p>
+        <p>版权所有@2021-2023 pzj <a href="${ctx}/admin/adlogin.jsp">后台管理</a></p>
     </div>
 </div>

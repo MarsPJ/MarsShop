@@ -336,4 +336,30 @@ public class GoodsDaoImpl extends BaseDao implements GoodsDao {
             close(conn, ps, null);
         }
     }
+
+    @Override
+    public void updateQuantityBatch(List<Goods> goodsList) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = getConn();
+            String sql = "update good set gdQuantity = gdQuantity - ?, " +
+                    "gdSaleQty = gdSaleQty + ? where gdID = ?";
+            ps = conn.prepareStatement(sql);
+            for (Goods goods : goodsList) {
+                ps.setInt(1, goods.getGdEvNum());
+                ps.setInt(2, goods.getGdEvNum());
+                ps.setInt(3, goods.getGdId());
+                ps.addBatch();
+            }
+            ps.executeBatch();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(conn, ps, null);
+        }
+
+    }
 }

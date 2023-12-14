@@ -136,4 +136,23 @@ public class CartDaoImpl extends BaseDao implements CartDao {
             close(conn, ps, null);
         }
     }
+
+    @Override
+    public void deleteByUid(Integer uid) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            conn = getConn();
+            String sql = "delete from scar where uID = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, uid);
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            close(conn, ps, null);
+        }
+    }
 }

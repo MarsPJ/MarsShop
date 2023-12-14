@@ -26,4 +26,16 @@ public interface OrderDao {
      * @param oid
      */
     void updateStatus(Integer ostatus, Integer oid);
+
+    /**
+     * 保存订单
+     * @param order
+     */
+    void save(Order order);
+
+    /**
+     * 根据会员id查询订单
+     * @return
+     */
+    List<Order> selectByUid(Integer uid);
 }

@@ -32,4 +32,19 @@ public interface OrderService {
      * @return
      */
     List<Goods> selectDetailByOid(Integer oid);
+
+    /**
+     * 根据订单的商品列表和会员id生成订单
+     * @param goodsList
+     * @param uid
+     */
+    void add(List<Goods> goodsList, Integer uid);
+
+
+    /**
+     * 根据会员id查询订单
+     * @param uid
+     * @return
+     */
+    List<Order> selectByUid(Integer uid);
 }

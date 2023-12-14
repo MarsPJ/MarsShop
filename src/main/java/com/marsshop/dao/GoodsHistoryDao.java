@@ -14,4 +14,11 @@ public interface GoodsHistoryDao {
      * @return
      */
     List<Goods> selectByOid(Integer oid);
+
+    /**
+     * 根据订单商品列表和订单id创建订单明细
+     * @param goodsList
+     * @param oid
+     */
+    void saveBatch(List<Goods> goodsList, Integer oid);
 }

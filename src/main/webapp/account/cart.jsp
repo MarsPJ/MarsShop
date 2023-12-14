@@ -25,7 +25,7 @@
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10">
 		<div class="cart">
-			<form class="form-horizontal" method="post" action="../account/myorder.html">
+			<form class="form-horizontal" method="post" action="${ctx}/account/order/settlement.html">
 				<div class="col-sm-12">
 					<h3>
 						<i class="fa fa-shopping-cart"></i> 购物车
@@ -44,6 +44,7 @@
 										 class="img-thumbnail" id="gdimage"
 										 src="${ctx}/upload/${cart.goods.gdImage}" />${cart.goods.gdName}
 									<input type="hidden" name="gdId" value="${cart.goods.gdId}" />
+									<input type="hidden" name="gdPrice" value="${cart.goods.gdPrice}" />
 								</td>
 								<td>¥ <span class="price">${cart.goods.gdPrice}</span></td>
 								<td>

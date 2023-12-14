@@ -2,6 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%--JSP页面中使用JSTL <c:...> 标签库的声明语句。它引入了 JSTL Core 库，其中包含了一组用于控制流程和基本数据操作的标签。--%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <div class="top-header">
     <div class="container">
@@ -54,16 +55,16 @@
     $(document).ready(function(){
         $("span.selected").click(function() {
             var selected = $(this).text();
-            if (selected == '注册') location.href = 'sign-up.jsp';
-            if (selected == '登录') location.href = 'sign-in.jsp';
+            if (selected == '注册') location.href = '${ctx}/sign-up.jsp';
+            if (selected == '登录') location.href = '${ctx}/sign-in.jsp';
 
         });
         $("ul li").click(function() {
             var selected = $(this).text();
-            if (selected == '我的订单') location.href = 'account/myorder.html';
+            if (selected == '我的订单') location.href = '${ctx}/account/order.html';
             if (selected == '注销') {
                 if (confirm('确定要注销吗？'))
-                    location.href = 'sign-out.html';
+                    location.href = '${ctx}/sign-out.html';
 
             }
 

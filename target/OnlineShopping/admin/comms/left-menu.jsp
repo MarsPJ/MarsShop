@@ -8,7 +8,7 @@
         <li><a href="#" data-target=".goodtype-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 类别管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="goodtype-menu nav nav-list collapse in">
             <li><a href="${ctx}/admin/goodstype"><span class="fa fa-caret-right"></span> 类别列表</a></li>
-            <li ><a href="${ctx}/admin/goodstype/add"><span class="fa fa-caret-right"></span> 类别添加</a></li>
+            <li ><a href="${ctx}/admin/goodstype-add.jsp"><span class="fa fa-caret-right"></span> 类别添加</a></li>
         </ul></li>
         <li><a href="#" data-target=".good-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 商品管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="good-menu nav nav-list collapse in">
