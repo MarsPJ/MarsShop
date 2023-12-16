@@ -90,7 +90,7 @@ public class GoodsUpdateController extends HttpServlet {
                         }
 
                         // 定义上传的目录
-                        File dir = new File("C:\\Users\\Mars\\Desktop\\upload");
+                        File dir = new File("/var/lib/tomcat9/webapps/MarsShop/upload");
                         // 如果目录不存在，创建（只要磁盘名存在，后面的目录都会被创建）
                         if (!dir.exists()) {
                             dir.mkdirs();

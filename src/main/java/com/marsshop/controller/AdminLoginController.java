@@ -37,6 +37,10 @@ public class AdminLoginController extends HttpServlet {
             // 重定向
             response.sendRedirect(rootPath + "/admin/goodstype");
         }
+    }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/admin/adlogin.jsp").forward(req, resp);
     }
 }

@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>OnlineShopping</artifactId>
+  <artifactId>MarsShop</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>OnlineShopping Maven Webapp</name>
+  <name>MarsShop Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
 
   <dependencies>
@@ -60,6 +61,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>OnlineShopping</finalName>
+    <finalName>MarsShop</finalName>
   </build>
 </project>

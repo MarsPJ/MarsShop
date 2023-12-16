@@ -8,7 +8,7 @@ public class BaseDao {
     // 驱动类名
     private static final String DRIVER_DEVICE_NAME = "com.mysql.cj.jdbc.Driver";
     // 连接字符串
-    private static final String URL = "jdbc:mysql://localhost:3306/easybuy";
+    private static final String URL = "jdbc:mysql://localhost:3306/marsshop?characterEncoding=utf-8&serverTimezone=UTC";
     // 连接用户名
     private static String DB_NAME = "root";
     // 连接密码

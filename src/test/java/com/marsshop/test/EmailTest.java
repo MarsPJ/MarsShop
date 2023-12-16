@@ -16,7 +16,7 @@ public class EmailTest {
     public String transportType = "smtp";           //邮件发送的协议
     public String fromUser = "2788265709";           //发件人名称
     public String fromEmail = "2788265709@qq.com";  //发件人邮箱
-    public String authCode = "vfncpsqzzfendfbb";    //发件人邮箱授权码
+    public String authCode = "syqtcatmqjcadhda";    //发件人邮箱授权码
     public String toEmail = "2788265709@qq.com";   //收件人邮箱
     public String subject = "邮件测试";           //主题信息
     @Test

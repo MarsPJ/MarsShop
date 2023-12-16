@@ -50,7 +50,7 @@ public final class EmailUtil {
             //设置发件人第一种方式：直接显示：antladdie <antladdie@163.com>
             //InternetAddress from = new InternetAddress(sender_username);
             //设置发件人第二种方式：发件人信息拼接显示：蚂蚁小哥 <antladdie@163.com>
-            String formName = MimeUtility.encodeWord("E诚尚品") + " <" + fromEmail + ">";
+            String formName = MimeUtility.encodeWord("MarsShop") + " <" + fromEmail + ">";
             InternetAddress from = new InternetAddress(formName);
             message.setFrom(from);
 

@@ -33,6 +33,7 @@ public class AdminServiceImpl implements AdminService {
                 // 将加密后的字节数组转为32位的16进制字符串
                 aPwd = new BigInteger(1, bytes).toString(16);
                 // 匹配密码，成功返回admin
+                System.out.println(aPwd);
                 if (aPwd.equals(admin.getApwd())) {
                     return admin;
                 }
