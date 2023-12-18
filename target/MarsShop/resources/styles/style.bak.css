@@ -435,21 +435,21 @@ ul.cute li{
 
 #banner1 {
 	padding: 4em 2em;
-	background: url(../images/banner1.jpg);
+	background: url(../images/logo3.png);
 	width: 819px;
 	height: 519px;
 }
 
 #banner2 {
 	padding: 4em 2em;
-	background: url(../images/banner2.jpg);
+	background: url(../images/logo2.png);
 	width: 819px;
 	height: 519px;
 }
 
 #banner3 {
 	padding: 4em 2em;
-	background: url(../images/banner3.jpg);
+	background: url(../images/logo1.png);
 	width: 819px;
 	height: 519px;
 }
@@ -1832,7 +1832,7 @@ ul.support li a {
 }
 
 .banner-matter #banner1 {
-	background: url(../images/banner1.jpg);
+	background: url(../images/logo3.png);
 	width: 819px;
 	height: 519px;
 }

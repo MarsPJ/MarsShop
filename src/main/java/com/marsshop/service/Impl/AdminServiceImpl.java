@@ -22,7 +22,7 @@ public class AdminServiceImpl implements AdminService {
         Admin admin = adminDao.selectByName(aname);
         // 如果用户存在，对输入的密码加密，并与数据库密码匹配
         if (admin != null ) {
-            // TODO:推荐使用更安全的加密算法，例如bcrypt。
+            // TODO:考虑使用更安全的加密算法，例如bcrypt。
             // 使用MD5加密
             try {
                 //创建md5加密工具对象

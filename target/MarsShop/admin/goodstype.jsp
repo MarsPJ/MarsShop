@@ -16,8 +16,8 @@
 
 		<h1 class="page-title">类别列表</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">类别管理</a></li>
+			<li>首页</li>
+			<li>类别管理</li>
 			<li class="active">类别列表</li>
 		</ul>
 
@@ -27,7 +27,7 @@
 		<div class="btn-toolbar list-toolbar">
 			<a class="btn btn-primary" href="${ctx}/admin/goodstype-add.jsp"><i class="fa fa-plus"></i>
 				添加类别</a>
-			<a class="btn btn-primary" href="#" onclick="delType()"><i class="fa fa-plus"></i>
+			<a class="btn btn-primary" href="#" onclick="delType()"><i class="fa fa-subtract"></i>
 				删除</a>
 		</div>
 		<table class="table">

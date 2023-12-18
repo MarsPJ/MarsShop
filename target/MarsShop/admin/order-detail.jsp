@@ -72,7 +72,7 @@
             <c:forEach items="${goodsList}" varStatus="status" var="g" >
                 <tr>
                     <td>${status.count}</td>
-                    <td><img class="img-thumbnail" id="gdimage"
+                    <td><img class="img-thumbnail" id="gdImage"
                              src="${ctx}/upload/${g.gdImage}" />${g.gdName}</td>
                     <td>${g.type.tname}</td>
                     <td>${g.gdPrice}</td>
@@ -89,7 +89,8 @@
                 $('#alertModal').modal('hide');
             });
         </script>
-        </body>
+</div>
+</body>
         </html>
 
 

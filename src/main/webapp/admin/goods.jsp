@@ -25,7 +25,7 @@
 		<div class="btn-toolbar list-toolbar">
 				<a class="btn btn-primary" href="${ctx}/admin/goods/addpage"><i class="fa fa-plus"></i>
 					添加商品</a>
-				<a class="btn btn-primary" href="#" onclick="delGoods()"><i class="fa fa-plus"></i>
+				<a class="btn btn-primary" href="#" onclick="delGoods()"><i class="fa fa-subtract"></i>
 					删除</a>
 				</div>
 			<div class="btn-group">

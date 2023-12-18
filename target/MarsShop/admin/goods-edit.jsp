@@ -16,8 +16,8 @@
 
 		<h1 class="page-title">商品修改</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">商品管理</a></li>
+			<li>首页</li>
+			<li>商品管理</li>
 			<li class="active">商品修改</li>
 		</ul>
 
@@ -54,7 +54,7 @@
 						<label class="col-sm-2 control-label">货号</label>
 						<div class="col-sm-3">
 							<input type="text" class="form-control" name="gdCode" value="${goods.gdCode}" maxlength="10"
-								placeholder="4901990000" required pattern="^\d{10}$">
+								placeholder="4901990000" required pattern="^\d{7}$">
 						</div>
 						<label class="col-sm-2 control-label">销售价格</label>
 						<div class="col-sm-2">

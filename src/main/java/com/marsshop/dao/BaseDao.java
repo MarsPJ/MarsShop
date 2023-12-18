@@ -12,7 +12,7 @@ public class BaseDao {
     // 连接用户名
     private static String DB_NAME = "root";
     // 连接密码
-    private static String DB_PWD = "123456";
+    private static String DB_PWD = "pzjpzj0101";
     // 加载mysql驱动类
     static {
         try {

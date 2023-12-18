@@ -17,8 +17,8 @@
 
 		<h1 class="page-title">商品添加</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">商品管理</a></li>
+			<li>首页</li>
+			<li>商品管理</li>
 			<li class="active">商品添加</li>
 		</ul>
 
@@ -49,7 +49,7 @@
 						<div class="col-sm-3">
 							<input type="text" class="form-control" name="gdCode"
 								<%--   定义货号格式，只能是10位数字--%>
-								placeholder="4901990000" required pattern="^\d{10}$" maxlength="10" value="${goods.gdCode}">
+								placeholder="4901990000" required pattern="^\d{7}$" maxlength="10" value="${goods.gdCode}">
 						</div>
 						<label class="col-sm-2 control-label">销售价格</label>
 						<div class="col-sm-2">

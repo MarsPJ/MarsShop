@@ -483,6 +483,10 @@
 .fa-plus:before {
   content: "\f067";
 }
+.fa-subtract:before {
+  content: "\f068";
+}
+
 .fa-minus:before {
   content: "\f068";
 }

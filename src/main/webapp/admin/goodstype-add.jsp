@@ -15,8 +15,8 @@
 
 		<h1 class="page-title">类别添加</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">类别管理</a></li>
+			<li>首页</li>
+			<li>类别管理</li>
 			<li class="active">类别添加</li>
 		</ul>
 

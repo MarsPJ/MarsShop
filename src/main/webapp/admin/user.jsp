@@ -15,8 +15,8 @@
 	<div class="header">
 		<h1 class="page-title">会员列表</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">会员管理</a></li>
+			<li>首页</li>
+			<li>会员管理</li>
 			<li class="active">会员列表</li>
 		</ul>
 	</div>

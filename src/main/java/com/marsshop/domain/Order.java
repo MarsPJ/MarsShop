@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * 订单实体类
+ */
 public class Order implements Serializable {
     private Integer oid; //主键
     private User user; //下单会员

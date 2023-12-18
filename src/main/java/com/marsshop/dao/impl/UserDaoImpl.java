@@ -213,7 +213,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
         try {
             conn = getConn();
-            String sql = "insert into easybuy.user (uname, uPwd, uSex, uBirth, uPhone, " +
+            String sql = "insert into user (uname, uPwd, uSex, uBirth, uPhone, " +
                     "uEmail, uQQ ,uRegTime)\n" +
                     "values (?,?,?,?,?,?,?,?)";
 

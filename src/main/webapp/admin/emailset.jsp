@@ -16,8 +16,8 @@
 
 		<h1 class="page-title">邮箱设置</h1>
 		<ul class="breadcrumb">
-			<li><a href="#">首页</a></li>
-			<li><a href="#">系统管理</a></li>
+			<li>首页</li>
+			<li>系统管理</li>
 			<li class="active">邮件设置</li>
 		</ul>
 

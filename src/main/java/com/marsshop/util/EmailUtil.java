@@ -13,7 +13,7 @@ public final class EmailUtil {
     private String emailHost = "smtp.qq.com";       //发送邮件的主机
     private String transportType = "smtp";           //邮件发送的协议
     private String fromEmail = "2788265709@qq.com";  //发件人邮箱
-    private String authCode = "vfncpsqzzfendfbb";    //发件人邮箱授权码
+    private String authCode = "syqtcatmqjcadhda";    //发件人邮箱授权码
     private EmailUtil(){}
     public static EmailUtil build(String emServer, String emAddress, String emPassCode) {
         EmailUtil emailUtil = new EmailUtil();
@@ -57,15 +57,6 @@ public final class EmailUtil {
             //设置收件人：
             InternetAddress to = new InternetAddress(targetEmail);
             message.setRecipient(Message.RecipientType.TO, to);
-
-//        //设置抄送人(两个)可有可无抄送人：
-//        List<InternetAddress> addresses = Arrays.asList(new InternetAddress("1457034247@qq.com"), new InternetAddress("575814158@qq.com"));
-//        InternetAddress[] addressesArr = (InternetAddress[]) addresses.toArray();
-//        message.setRecipients(Message.RecipientType.CC, addressesArr);
-
-            //设置密送人 可有可无密送人：
-            //InternetAddress toBCC = new InternetAddress(toEmail);
-            //message.setRecipient(Message.RecipientType.BCC, toBCC);
 
             //设置邮件主题
             message.setSubject(title);

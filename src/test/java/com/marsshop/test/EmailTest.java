@@ -39,7 +39,7 @@ public class EmailTest {
         //设置发件人第一种方式：直接显示：antladdie <antladdie@163.com>
         //InternetAddress from = new InternetAddress(sender_username);
         //设置发件人第二种方式：发件人信息拼接显示：蚂蚁小哥 <antladdie@163.com>
-        String formName = MimeUtility.encodeWord("E诚尚品") + " <" + fromEmail + ">";
+        String formName = MimeUtility.encodeWord("Mars Shop") + " <" + fromEmail + ">";
         InternetAddress from = new InternetAddress(formName);
         message.setFrom(from);
 
@@ -60,7 +60,7 @@ public class EmailTest {
         message.setSubject(subject);
 
         //设置邮件内容,这里我使用html格式，其实也可以使用纯文本；纯文本"text/plain"
-        message.setContent("<h1>E诚尚品邮件发送测试</h1>", "text/html;charset=UTF-8");
+        message.setContent("<h1>Mars Shop邮件发送测试</h1>", "text/html;charset=UTF-8");
 
         //保存上面设置的邮件内容
         message.saveChanges();
